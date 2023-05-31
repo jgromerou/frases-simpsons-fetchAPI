@@ -13,12 +13,10 @@ function App() {
   }, []);
 
   const consultarAPI = async () => {
-    //vamos hacer una peticion GET
     const respuesta = await fetch(
       'https://thesimpsonsquoteapi.glitch.me/quotes'
     );
     const datos = await respuesta.json();
-    console.log(datos[0]);
     setPersonaje(datos[0]);
   };
 
