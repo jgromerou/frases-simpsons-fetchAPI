@@ -9,7 +9,7 @@ function App() {
   const [personaje, setPersonaje] = useState({});
 
   useEffect(() => {
-    return () => consultarAPI();
+    consultarAPI();
   }, []);
 
   const consultarAPI = async () => {
