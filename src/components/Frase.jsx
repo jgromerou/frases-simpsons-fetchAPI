@@ -5,7 +5,7 @@ const Frase = ({ personaje }) => {
     <section className="my-5">
       <h2>{personaje.character}</h2>
       <hr />
-      <img className="mb-3" src={personaje.image} alt="" />
+      <img className="mb-3" src={personaje.image} alt={personaje.character} />
       <Card>
         <Card.Body>
           <figure>

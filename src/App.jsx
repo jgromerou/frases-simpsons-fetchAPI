@@ -9,7 +9,7 @@ function App() {
   const [personaje, setPersonaje] = useState({});
 
   useEffect(() => {
-    consultarAPI();
+    return () => consultarAPI();
   }, []);
 
   const consultarAPI = async () => {
@@ -18,6 +18,7 @@ function App() {
       'https://thesimpsonsquoteapi.glitch.me/quotes'
     );
     const datos = await respuesta.json();
+    console.log(datos[0]);
     setPersonaje(datos[0]);
   };
 
